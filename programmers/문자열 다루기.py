@@ -10,10 +10,24 @@ s5 = "1234567"
 
 
 def solution(s):
-    if len(s) != 4 and len(s) != 6:
+    if len(s) == 4 or len(s) == 6:  # 문자열 길이가 4 혹은 6인지 확인
+        if s.isdigit():  # 숫자로만 구성되있는지 확인
+            return True
+    return False
+
+
+print(solution(s1))
+print(solution(s2))
+print(solution(s3))
+print(solution(s4))
+print(solution(s5))
+
+
+def solution(s):
+    if len(s) != 4 and len(s) != 6: # 문자열 길이가 4 혹은 6인지 확인
         return False
     for i in s:
-        if i < '0' or i > '9':
+        if i < '0' or i > '9': # 1~8로 구성되있는지 확인
             return False
     return True
 
