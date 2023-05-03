@@ -33,7 +33,7 @@ def solution3(quiz):
     answer = []
     bool_to_OX = {False: 'X', True: 'O'}
     for equation in quiz:
-        a, operator, b, equal_sign, c = equation.split()           # 수식 분리
+        a, operator, b, equal_sign, c = equation.split()    # 수식 분리
         a, b, c = int(a), int(b), int(c)
         if operator == "+":
             answer.append(bool_to_OX[a+b == c])

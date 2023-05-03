@@ -11,7 +11,7 @@
 # 작업을 500번 반복할 때까지 1이 되지 않는다면 –1을 반환해 주세요.
 
 
-def solution(num):
+def solution1(num):
     count = 0
 
     while num != 1:              # 입력된 수가 1이 될 때까지 반복
@@ -25,6 +25,26 @@ def solution(num):
     return count                 # 작업을 수행한 횟수 반환
 
 
-print(solution(6))
-print(solution(16))
-print(solution(626331))
+print(solution1(6))
+print(solution1(16))
+print(solution1(626331))
+
+
+def solution2(num):
+    count = 0
+
+    while num != 1:
+        if num % 2:
+            num = num*3+1
+        else:
+            num //= 2
+        count += 1
+        if count == 500:
+            return -1
+
+    return count
+
+
+print(solution2(6))
+print(solution2(16))
+print(solution2(626331))
