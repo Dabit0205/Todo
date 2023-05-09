@@ -3,14 +3,14 @@ rsp2 = "205"
 
 
 def solution(rsp):
-    answer = ''
+    answer = ""
     for i in rsp:
         if i == "2":
-            answer += '0'
+            answer += "0"
         elif i == "0":
-            answer += '5'
+            answer += "5"
         elif i == "5":
-            answer += '2'
+            answer += "2"
     return answer
 
 
